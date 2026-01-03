@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet"href="style2.css"
+</head>
+<body>
+<div>
+  <p>WELCOME GYM ENTHUSIAST!</p>
+  <br>
+  <R><B>No Excuses Just Results</B></R>
+</div>
+ <!--PRICING-->
+ <form id="myform">
+  <label>Select plan:</label>
+<select id = "plan" style="width: 200px;">
+    <option value = "">select</option> 
+    <option value="monthly">Monthly</option>
+    <option Value = "quarterly">Quaterly</option>
+    <option Value = "yearly">Yearly</option>
+</select>
+<j id="price"></j>
+<br>
+Name:<input type = "text" id="name">
+<br><hr>
+E mail:<input type = "email" id="email">
+<br><hr>
+<button type ="submit"> Submit</button> 
+</form>
+
+<!--javascript-->
+<script>
+ var plan= 
+document.getElementById("plan");
+var price = 
+document.getElementById("price")
+var form =
+document.getElementById("myform")
+var message=
+document.getElementById("message")
+
+plan.onchange= function (){
+    if(plan.value =="monthly"){
+            price.innerHTML =" Monthly Price:1000";
+        }
+        else if(plan.value== "quarterly"){
+            price.innerHTML ="Quaterly Price: 2700"
+        }
+        else if(plan.value =="yearly"){
+            price.innerHTML="Yearly Price:9000"
+        }
+            else{
+                price.innerHTML=""
+            }
+};
+form.onsubmit = function(event){
+     event.preventDefault();
+     var name =
+     document.getElementById("name").value;
+     var email =
+     document.getElementById("email").value;
+     document.body.innerHTML=
+     "<h1 style='font-size:60px;margin-bottom:20px;text-align:centre;'>HI  " + name + "!</h1>"
+     + "<h2 style ='font-size:50px;text-align:centre;font-size:45px;margin-bottom:20px;'>WELCOME TO THE SMART FITNESS POINT</h2>"
+     + "<h3 style = 'text-align:centre;font-size:30px;margin-top:20px;'>Confirmation sent to  "
+     + email + "</h3>";    
+}
+</script>
+</body>
+</html>

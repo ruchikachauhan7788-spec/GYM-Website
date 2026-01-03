@@ -1,0 +1,23 @@
+div{
+    text-align:center;
+    font-size:50px;
+}
+body{
+    background-image: url("pic.jpg");
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    color:rgb(240, 248, 255);
+    font-family: arial;
+    text-align: center;
+}
+p{
+    text-decoration: solid underline;
+}
+r{
+    border : 2px solid white;
+}
+select{
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
